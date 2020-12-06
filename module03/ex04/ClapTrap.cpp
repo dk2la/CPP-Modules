@@ -99,8 +99,7 @@ ClapTrap::ClapTrap(const std::string& name): _name(name), _hitPoints(1000), _max
 
 ClapTrap::ClapTrap(const std::string& name, uint hp, uint mhp, uint ep, uint mep, uint lvl, uint mad, uint rad, uint adr): _hitPoints(hp), _maxHitPoints(mhp), _energyPoints(ep),
 		_maxEnergyPoints(mep), _level(lvl), _name(name), _meleeAttackDamage(mad),
-		_rangeAttackDamage(rad), _armourDamageReduction(adr) {
-}
+		_rangeAttackDamage(rad), _armourDamageReduction(adr) {}
 
 ClapTrap::ClapTrap() {}
 

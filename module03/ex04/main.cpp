@@ -1,6 +1,4 @@
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int		main(void) {
 	FragTrap fragTrap1("FR4G1");
@@ -42,5 +40,19 @@ int		main(void) {
 	ninjaTrap2.takeDamageSuperAttack();
 	ninjaTrap1.ninjaShoebox(clapTrap);
 	clapTrap.takeDamageSuperAttack();
+
+	std::cout << MAGENTA << "FROM THIS TIME WE PLAYING WITH NINJATRAP" << RESET << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	SuperTrap superTrap("SUPER1");
+
+	superTrap.FragTrap::rangedAttack(clapTrap.getName());
+	clapTrap.takeDamageSuperAttack();
+	superTrap.NinjaTrap::meleeAttack(clapTrap.getName());
+	clapTrap.takeDamageSuperAttack();
+	superTrap.beRepaired(100);
+
+	std::cout << CYAN << "THIS IS END OF GAME!" << RESET << std::endl;
 	return (0);
 }

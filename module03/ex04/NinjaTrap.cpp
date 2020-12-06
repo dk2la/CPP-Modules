@@ -61,5 +61,5 @@ NinjaTrap::NinjaTrap(const std::string& name): ClapTrap(name, 60, 60, 120, 120, 
 NinjaTrap::NinjaTrap() {}
 
 NinjaTrap::~NinjaTrap() {
-	std::cout << RED << "Destructor NinjaTrap is working" << RESET << std::endl;
+	std::cout << RED << "ARGGGHH...." << _name << " hero has been destroyed!" << RESET << std::endl;
 }

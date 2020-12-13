@@ -17,9 +17,11 @@ void			ClapTrap::takeDamageSuperAttack(void) {
 	}
 }
 
-void			ClapTrap::setEnergy(unsigned int energy) {
-	if (this->_energyPoints - energy <= 0)
+void			ClapTrap::setEnergy(int energy) {
+	if (_energyPoints - energy <= 0) {
+		_energyPoints = 0;	
 		std::cout << RED << "OHH... I WANT DO DO THIS, BUT NOT TODAY (HAVE NO CHAKRA)" << RESET << std::endl;
+	}
 	else
 		this->_energyPoints -= energy;
 }
@@ -91,8 +93,8 @@ ClapTrap&		ClapTrap::operator=(const ClapTrap &clapTrap) {
 	return (*this);
 }
 
-ClapTrap::ClapTrap(const std::string& name): _name(name), _hitPoints(1000), _maxHitPoints(1000), _energyPoints(1000),
-		_maxEnergyPoints(1000), _level(1000), _meleeAttackDamage(1000),
+ClapTrap::ClapTrap(const std::string& name): _hitPoints(1000), _maxHitPoints(1000), _energyPoints(1000),
+		_maxEnergyPoints(1000), _level(1000), _name(name), _meleeAttackDamage(1000),
 		_rangeAttackDamage(1000), _armourDamageReduction(1000) {
 	std::cout << RED << "ARGGGHH.... " << _name << " hero has created!" << RESET << std::endl;
 }

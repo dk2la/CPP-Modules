@@ -25,14 +25,14 @@ class ClapTrap {
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		std::string		getName(void) const;
-		void			setEnergy(unsigned int enegry);
+		void			setEnergy(int enegry);
 		void			setHitPoints(unsigned int hitPoints);
 		void			takeDamageSuperAttack(void);
 		~ClapTrap();
 	protected:
-		unsigned int			_hitPoints;
+		int						_hitPoints;
 		unsigned int			_maxHitPoints;
-		unsigned int			_energyPoints;
+		int						_energyPoints;
 		unsigned int			_maxEnergyPoints;
 		unsigned int			_level;
 		std::string				_name;

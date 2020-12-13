@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:33:58 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:33:59 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:08:14 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ class ClapTrap {
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		std::string		getName(void) const;
-		void			setEnergy(unsigned int enegry);
+		void			setEnergy(int enegry);
 		void			setHitPoints(unsigned int hitPoints);
 		void			takeDamageSuperAttack(void);
 		~ClapTrap();
 	protected:
-		unsigned int			_hitPoints;
+		int						_hitPoints;
 		unsigned int			_maxHitPoints;
-		unsigned int			_energyPoints;
+		int						_energyPoints;
 		unsigned int			_maxEnergyPoints;
 		unsigned int			_level;
 		std::string				_name;

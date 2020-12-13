@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:34:18 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:34:18 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:11:28 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ void			ClapTrap::takeDamageSuperAttack(void) {
 	}
 }
 
-void			ClapTrap::setEnergy(unsigned int energy) {
-	if (this->_energyPoints - energy <= 0)
+void			ClapTrap::setEnergy(int energy) {
+	if (this->_energyPoints - energy <= 0) {
+		_energyPoints = 0;
 		std::cout << RED << "OHH... I WANT DO DO THIS, BUT NOT TODAY (HAVE NO CHAKRA)" << RESET << std::endl;
+	}
 	else
 		this->_energyPoints -= energy;
 }
@@ -103,8 +105,8 @@ ClapTrap&		ClapTrap::operator=(const ClapTrap &clapTrap) {
 	return (*this);
 }
 
-ClapTrap::ClapTrap(const std::string& name): _name(name), _hitPoints(1000), _maxHitPoints(1000), _energyPoints(1000),
-		_maxEnergyPoints(1000), _level(1000), _meleeAttackDamage(1000),
+ClapTrap::ClapTrap(const std::string& name): _hitPoints(1000), _maxHitPoints(1000), _energyPoints(1000),
+		_maxEnergyPoints(1000), _level(1000), _name(name), _meleeAttackDamage(1000),
 		_rangeAttackDamage(1000), _armourDamageReduction(1000) {
 	std::cout << RED << "ARGGGHH.... " << _name << " hero has created!" << RESET << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:33:56 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:33:56 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:08:43 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void			ClapTrap::takeDamageSuperAttack(void) {
 	}
 }
 
-void			ClapTrap::setEnergy(unsigned int energy) {
+void			ClapTrap::setEnergy(int energy) {
 	if (this->_energyPoints - energy <= 0)
 		std::cout << RED << "OHH... I WANT DO DO THIS, BUT NOT TODAY (HAVE NO CHAKRA)" << RESET << std::endl;
 	else

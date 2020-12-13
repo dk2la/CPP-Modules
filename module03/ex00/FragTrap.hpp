@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:33:31 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:33:32 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:01:35 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ class FragTrap {
 		void			takeDamageSuperAttack(void);
 		~FragTrap();
 	private:
-		unsigned int			_hitPoints;
+		int						_hitPoints;
 		unsigned int			_maxHitPoints;
-		unsigned int			_energyPoints;
+		int						_energyPoints;
 		unsigned int			_maxEnergyPoints;
 		unsigned int			_level;
 		std::string				_name;

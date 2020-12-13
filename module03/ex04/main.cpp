@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:34:30 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:34:30 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:12:09 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		main(void) {
 	ninjaTrap1.ninjaShoebox(clapTrap);
 	clapTrap.takeDamageSuperAttack();
 
-	std::cout << MAGENTA << "FROM THIS TIME WE PLAYING WITH NINJATRAP" << RESET << std::endl;
+	std::cout << MAGENTA << "FROM THIS TIME WE PLAYING WITH SUPERTRAP" << RESET << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 

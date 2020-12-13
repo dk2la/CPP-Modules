@@ -6,7 +6,7 @@
 /*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 18:33:49 by sjakku            #+#    #+#             */
-/*   Updated: 2020/12/07 18:33:49 by sjakku           ###   ########.fr       */
+/*   Updated: 2020/12/09 22:07:35 by sjakku           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ void			ScavTrap::takeDamageSuperAttack(void) {
 	}
 }
 
-void			ScavTrap::setEnergy(unsigned int energy) {
-	if (this->_energyPoints - energy <= 0)
+void			ScavTrap::setEnergy(int energy) {
+	if (_energyPoints - energy <= 0) {
+		_energyPoints = 0;
 		std::cout << RED << "OHH... I WANT DO DO THIS, BUT NOT TODAY (HAVE NO CHAKRA)" << RESET << std::endl;
+	}
 	else
 		this->_energyPoints -= energy;
 }

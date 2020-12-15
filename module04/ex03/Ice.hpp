@@ -3,16 +3,14 @@
 
 # include "AMateria.hpp"
 
-class Ice: public AMateria {
+class Ice: public AMateria { 
 	public:
 		Ice();
+		virtual ~Ice();
 		Ice(const Ice&);
-		Ice&				operator=(const Ice&);
-		unsigned int		getXP() const;
-		AMateria*			clone() const;
-		void				use(ICharacter& target);
-		std::string	const&	getType() const;	
-		~Ice();
+		Ice&	operator=(const Ice&);
+		virtual	AMateria*	clone() const;
+		virtual void		use(ICharacter& target);
 };
 
 #endif

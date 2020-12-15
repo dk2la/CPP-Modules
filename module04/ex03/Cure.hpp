@@ -2,18 +2,15 @@
 # define CURE_HPP
 
 # include "AMateria.hpp"
-# include "ICharacter.hpp"
 
-class Cure: public AMateria{
+class Cure: public AMateria { 
 	public:
 		Cure();
+		virtual ~Cure();
 		Cure(const Cure&);
-		Cure&				operator=(const Cure&);
-		void				use(ICharacter& target);
-		unsigned int		getXP() const;
-		AMateria*			clone() const;
-		std::string const&	getType() const;
-		~Cure();
+		Cure&	operator=(const Cure&);
+		virtual	AMateria*	clone() const;
+		virtual void		use(ICharacter& target);
 };
 
 #endif

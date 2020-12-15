@@ -1,11 +1,11 @@
 #include "Bureaucrat.hpp"
 
 const	char*	Bureaucrat::GradeTooLowBureaucrat::what() const throw() {
-	return ("Bureaucrat grade lower!\n");
+	return ("Bureaucrat grade lower!");
 }
 
 const	char*	Bureaucrat::GradeTooHighBureaucrat::what() const throw() {
-	return ("Bureaucrat grade higher!\n");
+	return ("Bureaucrat grade higher!");
 }
 
 void		Bureaucrat::decGrade(void) {
@@ -34,7 +34,7 @@ Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& b) {
 	return *this;
 }
 
-std::ostream&	operator<<(std::ostream& out, const Bureaucrat& b) {
+std::ostream&	operator<<(std::ostream& out, Bureaucrat& b) {
 	return (out << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl);
 }
 

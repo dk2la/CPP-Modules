@@ -8,17 +8,16 @@ class Character: public ICharacter {
 		Character(const std::string&);
 		Character(const Character&);
 		Character&	operator=(const Character&);
+		std::string	const &	getName() const;
 		void				equip(AMateria* m);
 		void				unequip(int idx);
 		void				use(int idx, ICharacter& target);
-		std::string			const&	getName() const;
 		~Character();
 	private:
 		Character();
-		std::string	_name;
 		AMateria**	_pool;
-		int			_countPool;
-		
+		uint		_countPool;
+		std::string	_name;
 };
 
 #endif

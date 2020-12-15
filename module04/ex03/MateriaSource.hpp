@@ -2,21 +2,17 @@
 # define MATERIASOURCE_HPP
 
 # include "IMateriaSource.hpp"
-# include "AMateria.hpp"
 
 class MateriaSource: public IMateriaSource {
 	public:
 		MateriaSource();
-		MateriaSource&	operator=(const MateriaSource&);
-		MateriaSource(std::string const& type);
 		MateriaSource(const MateriaSource&);
-		~MateriaSource();
+		MateriaSource&	operator=(const MateriaSource&);
 		void		learnMateria(AMateria*);
-		AMateria*	createMateria(std::string const& type);
+		AMateria*	createMateria(std::string const & type);
+		virtual ~MateriaSource();
 	private:
-		std::string _type;
-		AMateria**	_backPool;
-		int			_count;
+		AMateria* _amateria[4];
 };
 
 #endif

@@ -4,6 +4,8 @@
 # include <iostream>
 # include "Form.hpp"
 
+class Form;
+
 class Bureaucrat {
 	public:
 		Bureaucrat(const Bureaucrat&);
@@ -14,9 +16,9 @@ class Bureaucrat {
 		struct			GradeTooHighBureaucrat: public std::exception {const char*	what(void) const throw();};
 		void			incGrade(void);
 		void			decGrade(void);
-		void			signForm(const Form&);
 		std::string		getName(void) const;
 		int				getGrade(void) const;
+		void			signForm(Form& f) const;
 	private:
 		Bureaucrat();
 		std::string _name;

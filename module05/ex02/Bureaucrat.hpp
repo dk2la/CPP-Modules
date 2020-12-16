@@ -19,6 +19,7 @@ class Bureaucrat {
 		std::string		getName(void) const;
 		int				getGrade(void) const;
 		void			signForm(Form& f) const;
+		void			executeForm(Form const & f);
 	private:
 		Bureaucrat();
 		std::string _name;

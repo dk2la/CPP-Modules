@@ -4,8 +4,10 @@ int		main() {
 	
 	Bureaucrat chert("Chert", 50);
 	Form	form51("FORM51", 51, 100);
-	Form	form49("FORM51", 0, 49);
+	Form	form49("FORM51", 1, 49);
 	Form	form50("FORM51", 50, 50);
+	Form	form("Low exc", 1, 1);
+
 	try {
 		Bureaucrat b1("Kek", 50);
 		std::cout << b1;

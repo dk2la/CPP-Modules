@@ -19,9 +19,10 @@ class Form {
 		int			getGradeSign(void) const;
 		std::string	getName(void) const;
 		void		setSignStatusTrue(void);
-		~Form();
-	private:
+		virtual	void	execute(Bureaucrat const & b) const = 0;
+		virtual ~Form();
 		Form();
+	protected:
 		const std::string	_name;
 		const int		 	_gradeSign;
 		const int			_gradeExec;

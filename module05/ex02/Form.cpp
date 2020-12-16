@@ -23,9 +23,9 @@ void		Form::setSignStatusTrue(void){
 
 void		Form::beSigned(const Bureaucrat& b) {
 	if (this->_gradeSign < b.getGrade())
-		throw GradeTooLowException();
+		throw Form::GradeTooLowException();
 	if (this->_signedStatus)
-		throw FormIsSignedException();
+		throw Form::FormIsSignedException();
 	setSignStatusTrue();
 }
 
@@ -46,9 +46,9 @@ Form::Form(const Form& f): _name(f.getName()), _gradeSign(f.getGradeSign()), _gr
 
 Form::Form(const std::string& name, int gradeSign, int gradeExec): _name(name), _gradeSign(gradeSign), _gradeExec(gradeExec), _signedStatus(false) {
 	if (this->_gradeSign < 1 || this->_gradeExec < 1)
-		throw GradeTooLowException();
+		throw Form::GradeTooLowException();
 	if (this->_gradeSign > 150 || this->_gradeExec > 150)
-		throw GradeTooHighException();
+		throw Form::GradeTooHighException();
 }
 
 Form::Form(): _name(0), _gradeSign(0), _gradeExec(0), _signedStatus(false) {}

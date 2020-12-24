@@ -21,7 +21,7 @@ class MutantStack: public std::stack<T> {
 				iterator(): _it(nullptr) {};
 				iterator(T* it): _it(it) {};
 				iterator(const MutantStack<T>::iterator &it) { *this = it; };
-				MutantStack<T>::iterator&	operator=(const MutantStack<T>::iterator& it) { return (*this = it); };
+				MutantStack<T>::iterator&	operator=(const MutantStack<T>::iterator& it) { (void)it; return *this; };
 				MutantStack<T>::iterator&	operator++() { this->_it += 1; return *this; };
 				MutantStack<T>::iterator&	operator--() { this->_it -= 1; return *this; };
 				bool	operator==(const MutantStack<T>::iterator& it) { return (this->_it == it._it); };
@@ -43,8 +43,8 @@ class MutantStack: public std::stack<T> {
 			private:
 				T *_it;
 		};
-		MutantStack<T>::iterator begin() { return iterator(&this->top()); };
-		MutantStack<T>::iterator end() { return iterator(&this->top() - this->size() - 1); };
+		MutantStack<T>::iterator begin() { return iterator(&this->top() - (this->size() - 1)); };
+		MutantStack<T>::iterator end() { return iterator(&this->top() + 1); };
 		virtual ~MutantStack() {};
 };
 

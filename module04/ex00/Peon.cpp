@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Peon.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:30:32 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:41:56 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Peon.hpp"
 
 void	Peon::getPolymorphed(void) const {
@@ -5,7 +17,8 @@ void	Peon::getPolymorphed(void) const {
 }
 
 Peon&	Peon::operator=(const Peon& peon) {
-	return (*this = peon);
+	this->_name = peon.getName();
+	return *this;
 }
 
 Peon::Peon(const std::string& name): Victim(name) {

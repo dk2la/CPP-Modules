@@ -9,15 +9,15 @@ const	char*	Bureaucrat::GradeTooHighBureaucrat::what() const throw() {
 }
 
 void		Bureaucrat::decGrade(void) {
-	if (this->_grade - 1 < 1)
+	if (this->_grade + 1 < 1)
 		throw GradeTooLowBureaucrat();
-	this->_grade -= 1;
+	this->_grade += 1;
 }
 
 void		Bureaucrat::incGrade(void) {
-	if (this->_grade + 1 > 150)
+	if (this->_grade - 1 > 150)
 		throw GradeTooHighBureaucrat();
-	this->_grade += 1;
+	this->_grade -= 1;
 }
 
 int			Bureaucrat::getGrade(void) const {
@@ -29,8 +29,8 @@ std::string	Bureaucrat::getName(void) const {
 }
 
 Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& b) {
-	this->_name = b._name;
-	this->_grade = b._grade;
+	this->_name = b.getName();
+	this->_grade = b.getGrade();
 	return *this;
 }
 

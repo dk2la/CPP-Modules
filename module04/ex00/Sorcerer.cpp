@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Sorcerer.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:30:38 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:38:21 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Sorcerer.hpp"
 
 std::string		Sorcerer::getName(void) const {
@@ -9,6 +21,8 @@ std::string		Sorcerer::getTitle(void) const {
 }
 
 Sorcerer&	Sorcerer::operator=(const Sorcerer& sorcerer) {
+	this->_name = sorcerer.getName();
+	this->_type = sorcerer.getTitle();
 	return *this;
 }
 

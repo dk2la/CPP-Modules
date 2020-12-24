@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:31:07 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:31:07 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Enemy.hpp"
 #include "AWeapon.hpp"
 #include "Character.hpp"
 #include "RadScorpion.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "SuperMutant.hpp"
 
 int main()
 {

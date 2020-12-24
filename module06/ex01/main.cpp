@@ -18,7 +18,7 @@ void	*serialize(void) {
 		returnV[i] = "abcdefghijklmnopqrstuvwxyz"[std::rand() % 26];
 	return returnV;
 }
-
+	
 Data*	deserialize(void *raw) {
 	Data*	data = new Data();
 	char*	tmp_raw = reinterpret_cast<char*>(raw);

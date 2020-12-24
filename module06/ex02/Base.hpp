@@ -11,7 +11,7 @@ class Base {
 public:
 	Base() {}
 	Base(const Base& b) { *this = b; }
-	Base&   operator=(const Base& b) { return *this; }
+	Base&   operator=(const Base& b) { (void)b; return *this; }
 	virtual std::string    getClass(void) const = 0;
 	virtual ~Base() {}
 };

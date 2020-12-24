@@ -19,7 +19,6 @@ void    identify_from_reference(Base &p) {
 	catch (const std::bad_cast& bc) {
 		std::cout << bc.what() << " with class a" << std::endl;
 	}
-	std::cout << "pointer" << std::endl;
 	try {
 		B &b = dynamic_cast<B&>(p);
 		std::cout << "class " << b << std::endl;

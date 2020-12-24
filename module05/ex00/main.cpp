@@ -16,8 +16,23 @@ int		main() {
 		std::cout << e.what() << std::endl;
 	}
 	try {
+		Bureaucrat test_inc("Test", 150);
+		test_inc.incGrade();
+		std::cout << test_inc;
+	}
+	catch (const std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
 		Bureaucrat b3("Chert", 0);
 		std::cout << b3;
+	}
+	catch(const std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		Bureaucrat b4("Chert", 60);
+		std::cout << b4;
 	}
 	catch(const std::exception& e) {
 		std::cout << e.what() << std::endl;

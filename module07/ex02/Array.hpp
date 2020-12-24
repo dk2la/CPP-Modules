@@ -10,8 +10,8 @@ class Array {
 		Array(uint size): _size(size), _array(nullptr) {
 			this->_array = new T[this->_size];
 		}
-		Array(const Array<T>& arr): _size(0), _array(nullptr) { *this = arr; }
-		Array<T>&	operator=(const Array& arr) {
+		Array(const Array& arr): _size(arr._size), _array(nullptr) { *this = arr; }
+		Array&	operator=(const Array& arr) {
 			if (this->_array)
 				delete [] this->_array;
 			this->_size = arr._size;

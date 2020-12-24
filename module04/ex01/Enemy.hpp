@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Enemy.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:31:04 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:42:15 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ENEMY_HPP
 # define ENEMY_HPP
 
@@ -11,7 +23,7 @@ class Enemy {
 		std::string 	getType(void) const;
 		int				getHp(void) const;
 		virtual void	takeDamage(int);
-		~Enemy();
+		virtual ~Enemy();
 	protected:
 		Enemy();
 		int			_hp;

@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   TacticalMarine.cpp                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:31:56 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:46:19 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "TacticalMarine.hpp"
 
 TacticalMarine&	TacticalMarine::operator=(const TacticalMarine& tm) {
-	return (*this = tm);
+	(void)tm;
+	return (*this);
 }
 
 ISpaceMarine*	TacticalMarine::clone() const {

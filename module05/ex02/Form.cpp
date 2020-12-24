@@ -1,7 +1,6 @@
 #include "Form.hpp"
 
 std::ostream&	operator<<(std::ostream& out, const Form& f) {
-	// return (out << "Form: " << f.getName() << (f.getSignedStatus() ? " is signed " : " is unsigned ") << " Grade sign: " << f.getGradeSign() << " Grade exec: " << f.getGradeExec() << std::endl);
 	out << "Form: " << f.getName();
 	if (f.getSignedStatus())
 		out << " is signed! ";

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:32:34 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:32:35 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
@@ -22,6 +34,8 @@ int main()
     me->equip(tmp);
     // std::cout << "HERE\n" << std::endl;
     tmp = src->createMateria("cure");
+	me->equip(tmp);
+	tmp = src->createMateria("lol");
     // std::cout << "HERE\n" << std::endl;
     me->equip(tmp);
     // std::cout << "HERE\n" << std::endl;

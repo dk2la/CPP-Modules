@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:31:15 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:45:04 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PowerFist.hpp"
 #include "AWeapon.hpp"
 
@@ -10,6 +22,7 @@ PowerFist::PowerFist(const PowerFist& plasma) {
 }
 
 PowerFist&	PowerFist::operator=(const PowerFist& plasma) {
+	(void)plasma;
 	return *this;
 }
 

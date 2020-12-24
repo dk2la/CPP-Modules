@@ -72,8 +72,8 @@ int		main() {
 	try {
 		robot->beSigned(supervisor);
 		robot->execute(supervisor);
-		supervisor.executeForm(*robot);
-		supervisor.executeForm(*robot);
+//		supervisor.executeForm(*robot);
+//		supervisor.executeForm(*robot);
 	}
 	catch (std::exception const &e) {
 		std::cerr << e.what() << std::endl;

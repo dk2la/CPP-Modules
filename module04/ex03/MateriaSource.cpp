@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:32:37 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:32:38 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "MateriaSource.hpp"
 
 AMateria*		MateriaSource::createMateria(std::string const & type) {
-	for (int i = 0; this->_amateria[i]; i++) {
-		if (_amateria[i]->getType() == type)
-			return _amateria[i]->clone();
-		else if (this->_amateria[i] == nullptr)
-			return nullptr;
-	}
+//	if (type.find("cure") != std::string::npos || type.find("ice") != std::string::npos) {
+		for (int i = 0; this->_amateria[i]; i++) {
+			if (_amateria[i]->getType() == type)
+				return _amateria[i]->clone();
+			else if (this->_amateria[i] == nullptr)
+				return nullptr;
+		}
+//	}
 	return nullptr;
 }
 
 void			MateriaSource::learnMateria(AMateria* amateria) {
-//	if (_amateria == nullptr)
-//		return ;
 	for (int i = 0; i < 4; ++i) {
 		if (!_amateria[i]) {
 			this->_amateria[i] = amateria->clone();

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sjakku <sjakku@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/17 14:30:48 by sjakku            #+#    #+#             */
+/*   Updated: 2020/12/17 14:30:48 by sjakku           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef VICTIM_HPP
 # define VICTIM_HPP
 
@@ -8,7 +20,7 @@ class Victim {
 	public:
 		Victim(const std::string&);
 		Victim& operator=(const Victim& );
-		void	getPolymorphed(void) const;
+		virtual void	getPolymorphed(void) const;
 		std::string	getName(void) const;
 		~Victim();
 	protected:

@@ -10,13 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		ex01
-SRC = 		main.cpp
+NAME =		ex03
+SRC = 		Base.cpp A.cpp B.cpp C.cpp main.cpp
 OBJPATH = 	obj/
 CC = 		clang++
 CFLAGS = 	-Wall -Wextra -Werror
 OBJ = 		$(addprefix $(OBJPATH),$(SRC:.cpp=.o))
-HEADER =    Iter.hpp
 
 RED = \033[1;31m
 GREEN = \033[1;32m
@@ -32,7 +31,7 @@ TEXT_RESET = \033[0;0m
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 	@echo "$(GREEN)Success$(TEXT_RESET)"
 

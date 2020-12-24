@@ -13,12 +13,22 @@ void	mySwap(T& a, T& b) {
 
 template <typename K>
 K&	myMin(K& a, K& b) {
-	return (a > b) ? b : a;
+	if (a > b)
+		return (b);
+	else if (a == b)
+		return (b);
+	else
+		return (a);
 }
 
 template <typename M>
 M&	myMax(M& a, M& b) {
-	return (a > b) ? a : b;
+	if (a > b)
+		return (a);
+	else if (a == b)
+		return (b);
+	else
+		return (b);
 }
 
 #endif
